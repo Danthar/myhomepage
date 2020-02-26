@@ -17,12 +17,12 @@ namespace LocalHome.Pages {
         public IUserLinkJsonReader UlReader { get; set; }
 
         public async Task<List<UserLink>> GetUserLinks() {
-            string filepath = Path.Combine(WebHostEnv.WebRootPath, "sayedha.json");
+            string filepath = Path.Combine(WebHostEnv.WebRootPath, "data.json");
             return await UlReader.GetUserLinksFromFileAsync(filepath);
         }
 
         public async Task<List<UserLinkViewModel>> GetUserLinkViewModels() {
-            string filepath = Path.Combine(WebHostEnv.WebRootPath, "sayedha.json");
+            string filepath = Path.Combine(WebHostEnv.WebRootPath, "data.json");
             List<UserLink>links = await UlReader.GetUserLinksFromFileAsync(filepath);
             
             List<UserLinkViewModel> result = new List<UserLinkViewModel>();

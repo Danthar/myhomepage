@@ -4,6 +4,10 @@
     "SearchUrl": "https://www.google.com/search?q={0}"
   },
   {
+    "DisplayName": "duckduckgo",
+    "SearchUrl": "https://www.duckduckgo.com/search?q={0}"
+  },
+  {
     "DisplayName": "bing",
     "SearchUrl": "https://www.bing.com/search?q={0}"
   },

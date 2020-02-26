@@ -14,7 +14,7 @@
 
         if (ul != null && ul.UserLink != null) {
             // TODO: Should get this from some service as well
-            string filepath = Path.Combine(WebHostEnv.WebRootPath, "sayedha.json");
+            string filepath = Path.Combine(WebHostEnv.WebRootPath, "data.json");
             await addLinkService.AddLinkAsync(filepath, ul.UserLink);
         }
     }

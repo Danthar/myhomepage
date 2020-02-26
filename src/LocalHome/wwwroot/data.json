@@ -1,0 +1,86 @@
+[
+  {
+    "Text": "UTF-8 Icons",
+    "ImageUrl": "/images/utf8-icons.png",
+    "Url": "https://www.utf8icons.com/",
+    "InvertImageColors": false,
+    "BackgroundColor": null
+  },
+  {
+    "Text": "Azure Portal",
+    "ImageUrl": "/images/azure-favicon.ico",
+    "Url": "https://portal.azure.com/",
+    "InvertImageColors": false,
+    "BackgroundColor": null
+  },
+  {
+    "Text": "Pillar docs",
+    "ImageUrl": "/images/pillar.svg",
+    "Url": "http://aka.ms/dts-pillar",
+    "InvertImageColors": false,
+    "BackgroundColor": null
+  },
+  {
+    "Text": "SimpleIcons (svg for many brands)",
+    "ImageUrl": "/images/simpleicons.ico",
+    "Url": "https://simpleicons.org/",
+    "InvertImageColors": true,
+    "BackgroundColor": null
+  },
+  {
+    "Text": "IconFinder",
+    "ImageUrl": "/images/iconfinder-favicon-96x96.png",
+    "Url": "https://www.iconfinder.com/search/?q=dogfood&from=homepage",
+    "InvertImageColors": false,
+    "BackgroundColor": "white"
+  },
+  {
+    "Text": "Pluralsight",
+    "ImageUrl": "/images/pluralsight.png",
+    "Url": "https://aka.ms/pluralsight",
+    "InvertImageColors": false,
+    "BackgroundColor": null
+  },
+  {
+    "Text": "ASP.NET Core docs",
+    "ImageUrl": "/images/msft-docs.png",
+    "Url": "https://docs.asp.net/",
+    "InvertImageColors": false,
+    "BackgroundColor": null
+  },
+  {
+    "Text": "Google fonts",
+    "ImageUrl": "/images/google_fonts_lodp.ico",
+    "Url": "https://fonts.google.com",
+    "InvertImageColors": false,
+    "BackgroundColor": null
+  },
+  {
+    "Text": "StackOverflow",
+    "ImageUrl": "/images/stackoverflow.ico",
+    "Url": "https://stackoverflow.com",
+    "InvertImageColors": false,
+    "BackgroundColor": null
+  },
+  {
+    "Text": "IDWeb",
+    "ImageUrl": "/images/id-card.svg",
+    "Url": "https://aka.ms/idweb",
+    "InvertImageColors": true,
+    "BackgroundColor": null
+  },
+  {
+    "Text": "CSS Fonts",
+    "ImageUrl": "/images/font.svg",
+    "Url": "https://www.cssfontstack.com/Consolas",
+    "InvertImageColors": true,
+    "BackgroundColor": null
+  },
+  {
+    "Text": "Focus Ontwikkel",
+    "ImageUrl": "/images/bug.svg",
+    "Url": "https://focus-develop.strukton.com",
+    "InvertImageColors": false,
+    "BackgroundColor": null
+  }
+]
