@@ -1,0 +1,13 @@
+﻿<div class="link-group">
+    <h2>@GroupVM.Name</h2>
+    @foreach (UserLinkViewModel links in GroupVM.Links)
+    {
+        <Link UserLinkVM="@links" />
+
+    }
+</div>
+
+@code {
+    [Parameter]
+    public UserlinkGroupViewModel GroupVM { get; set; }
+}

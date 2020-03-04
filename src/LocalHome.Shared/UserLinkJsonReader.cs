@@ -6,32 +6,39 @@ using System.IO;
 using System.Threading.Tasks;
 using Newtonsoft.Json;
 
-namespace LocalHome.Shared {
-    public class UserLinkJsonReader : IUserLinkJsonReader {
-        public async Task<List<UserLink>> GetUserLinksFromFileAsync(string filepath) {
+namespace LocalHome.Shared
+{
+    public class UserLinkJsonReader : IUserLinkJsonReader
+    {
+        public async Task<List<UserLinkGroup>> GetUserLinksFromFileAsync(string filepath)
+        {
             Debug.Assert(filepath != null);
             return GetUserLinksFrom(await File.ReadAllTextAsync(filepath));
         }
 
-        public List<UserLink> GetUserLinksFrom(string text) {
+        public List<UserLinkGroup> GetUserLinksFrom(string text)
+        {
             Debug.Assert(text != null);
-            List<UserLink> result = JsonConvert.DeserializeObject<List<UserLink>>(text);
+            List<UserLinkGroup> result = JsonConvert.DeserializeObject<List<UserLinkGroup>>(text);
             return result;
         }
     }
 
-    public class UserLinkJsonWriter : IUserLinkJsonWriter {
-        public async Task WriteUserLinksToFileAsync(string filepath, IList<UserLink> userLinks) {
+    public class UserLinkJsonWriter : IUserLinkJsonWriter
+    {
+        public async Task WriteUserLinksToFileAsync(string filepath, IList<UserLinkGroup> userLinksGroups)
+        {
             Debug.Assert(!string.IsNullOrEmpty(filepath));
-            Debug.Assert(userLinks != null);
+            Debug.Assert(userLinksGroups != null);
 
-            await File.WriteAllTextAsync(filepath, GetStringFor(userLinks));
+            await File.WriteAllTextAsync(filepath, GetStringFor(userLinksGroups));
 
         }
-        public string GetStringFor(IList<UserLink> userLinks) {
-            Debug.Assert(userLinks != null);
+        public string GetStringFor(IList<UserLinkGroup> userLinksGroups)
+        {
+            Debug.Assert(userLinksGroups != null);
 
-            return JsonConvert.SerializeObject(userLinks, Formatting.Indented); ;
+            return JsonConvert.SerializeObject(userLinksGroups, Formatting.Indented); ;
         }
     }
 

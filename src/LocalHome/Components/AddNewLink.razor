@@ -35,17 +35,20 @@
     [Parameter]
     public EventCallback<UserLinkEventArgs> OnNewLink { get; set; }
 
-    public async Task HandleValidSubmit() {
+    public async Task HandleValidSubmit()
+    {
         DoAddNewLink();
 
-        await OnNewLink.InvokeAsync(new UserLinkEventArgs(UserLink));
+        await OnNewLink.InvokeAsync(new UserLinkEventArgs(UserLink, "Overig"));
     }
 
-    public void DoAddNewLink() {
+    public void DoAddNewLink()
+    {
         LogInfo();
     }
 
-    private void LogInfo() {
+    private void LogInfo()
+    {
         Console.WriteLine($@"
 Text: {UserLink.Text}
 Url: {UserLink.Url}

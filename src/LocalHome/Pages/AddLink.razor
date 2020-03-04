@@ -12,10 +12,11 @@
     {
         Console.WriteLine("inside of new link");
 
-        if (ul != null && ul.UserLink != null) {
+        if (ul != null && ul.UserLink != null)
+        {
             // TODO: Should get this from some service as well
             string filepath = Path.Combine(WebHostEnv.WebRootPath, "data.json");
-            await addLinkService.AddLinkAsync(filepath, ul.UserLink);
+            await addLinkService.AddLinkAsync(filepath, ul.UserLink, ul.Groupname);
         }
     }
 }

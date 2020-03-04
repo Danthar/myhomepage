@@ -5,9 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Components\" />
     <Folder Include="wwwroot\js\" />
-    <Folder Include="ViewModels\" />
     <Folder Include="Services\" />
   </ItemGroup>
   <ItemGroup>

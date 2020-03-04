@@ -11,9 +11,11 @@ Color Palette:
 html, body {
     font-family: 'Roboto', sans-serif, Helvetica, Arial, sans-serif;
     background-color: #0B0C10;
-    padding: 50px;
+    padding: 0;
     color: #C5C6C7;
+    transition: background-color 200ms;
 }
+
 .hidden{
     display:none;
 }
@@ -76,25 +78,17 @@ html, body {
 
 
 .search-container {
-    padding-bottom:10px;
-    width:100%;
+    padding: 20px 30px;
+    margin-bottom: 20px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
 .searchAndFilter {
     border-radius: 10px;
     width:80%;
-    padding-left:40px;
-}
-.fakebox-search-icon {
-    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzVGNjM2OCI+PHBhdGggZD0iTTE1LjUgMTRoLS43OWwtLjI4LS4yN0E2LjQ3MSA2LjQ3MSAwIDAgMCAxNiA5LjUgNi41IDYuNSAwIDEgMCA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg==);
-    -webkit-mask-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgZmlsbD0iIzVGNjM2OCI+PHBhdGggZD0iTTE1LjUgMTRoLS43OWwtLjI4LS4yN0E2LjQ3MSA2LjQ3MSAwIDAgMCAxNiA5LjUgNi41IDYuNSAwIDEgMCA5LjUgMTZjMS42MSAwIDMuMDktLjU5IDQuMjMtMS41N2wuMjcuMjh2Ljc5bDUgNC45OUwyMC40OSAxOWwtNC45OS01em0tNiAwQzcuMDEgMTQgNSAxMS45OSA1IDkuNVM3LjAxIDUgOS41IDUgMTQgNy4wMSAxNCA5LjUgMTEuOTkgMTQgOS41IDE0eiIvPjwvc3ZnPg==);
-    -webkit-mask-repeat: no-repeat;
-    -webkit-mask-size: 100%;
-    background: 24px 24px rgb(117, 117, 117);
-    height: 24px;
-    width: 24px;
-    position: relative;
-    top: 38px;
-    left: 10px;
 }
 
 button, input, select {
@@ -110,6 +104,17 @@ button, input, select {
     border-radius: .5em;
     background-color: #C5C6C7;
 }
+button {
+    background: #FF8C00;
+    border-radius: 0;
+    font-size: 16px;
+    color: white;
+    padding: 10px 15px;
+    height: 50px;
+    width: 120px;
+    border-radius: 5px;
+}
+
 #inputTextSearchFilter {
     background-color: #1F2833;
     color: #45A29E;
@@ -162,3 +167,103 @@ select {
 body {
     padding: 3rem;
 }
+
+#darktheme, #lighttheme {
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    border: 2px solid white;
+    background-color: black;
+    position: absolute;
+
+}
+
+#lighttheme {
+    border: 2px solid black;
+    background-color: white;
+    right: 50px;
+    top: 5px;
+
+}
+
+#darktheme {
+    right: 10px;
+    top: 5px;
+    border: 2px solid white;
+    background-color: black;
+}
+
+/* LIGHT THEME!!!*/
+html.light {
+    background-color: #e2e2e2;
+}
+html.light body {
+    background-color: #e2e2e2;
+}
+
+    html.light button {
+        background: #710094;
+    }
+    html.light .search-container {
+        background-color: white;
+        padding: 20px 30px;
+        margin-bottom: 20px;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        display:flex;
+        flex-direction: row;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    .search-container > div{
+        display:flex;
+    }
+
+#inputTextSearchFilter {
+    background-color: black;
+    color: white;
+    font-weight: 400;
+    border-radius: 0;
+    width: 500px;
+    margin-right: 0;
+}
+html.light #inputTextSearchFilter {
+    background-color: white;
+    color: black;
+    font-weight: 400;
+    border-radius: 0;
+    width: 500px;
+    margin-right: 0;
+}
+
+
+    html.light .cleanSelect {
+        width: 200px;
+        background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23007CB2%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E');  background-repeat: no-repeat, repeat;
+        background-position: right .7em top 50%, 0 0;
+        background-size: .65em auto, 100%;
+        color: #0B0C10;
+        background-color: white;
+    }
+
+    html.light .userlink-container {
+        background-color: white;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transition: transform 200ms ease-in-out;
+    }
+    html.light .userlink-container:hover {
+        background-color: white;
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+        transform: scale(1.05);
+    }
+
+    .userlink-image {
+        min-height: 100px;
+        padding-bottom: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
